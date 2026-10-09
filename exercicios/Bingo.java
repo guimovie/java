@@ -1,9 +1,10 @@
 import java.util.Scanner;
 import java.util.Random;
 public class Bingo {
-    static Scanner input = new Scanner(System.in);
-    Random random = new Random();
+    private static Scanner input = new Scanner(System.in);
+    private static Random random = new Random();
     private static int Bingo[] = new int[76];
+    private static char[] letras = "BINGO".toCharArray();
     public static void main(String[] args){
         int opcao;
         System.out.println("BINGO");
