@@ -6,23 +6,23 @@ public class Loteria {
 
     public int[] gerarNumeros(){
         int[] numeros = new int[6];
+
         for (int i = 0; i < numeros.length; i++) {
             int numero;
+            boolean repetido;
             do {
                 numero = random.nextInt(60) + 1;
-            } while (existeNumero(numeros, numero).length > 0);
+                repetido = false;
+                for (int j = 0; j < i; j++) {
+                    if (numeros[j] == numero) {
+                        repetido = true;
+                        break;
+                    }
+                }
+            } while (repetido);
             numeros[i] = numero;
         }
         return numeros;
-    }
-
-    public int[] existeNumero(int[] numeros, int numero){
-        for (int n : numeros){
-            if (n == numero){
-                return new int[]{n};
-            }
-        }
-        return new int[0];
     }
 
     public static void main(String[] args){
