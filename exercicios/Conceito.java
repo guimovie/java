@@ -9,26 +9,32 @@ public class Conceito {
 
         do {
             st = JOptionPane.showInputDialog(null, "Informe sua primeira nota");
-            if (st == null || st.length() == 0){
+            if (st == null){
+                JOptionPane.showMessageDialog(null, "Saindo...");
+                System.exit(0);
+            } else if (st.length() == 0){
                 JOptionPane.showMessageDialog(null, "É necessario inserir uma nota!", "Erro!", 0);
-            } 
-            else nota1 = Double.parseDouble(st);
+            } else nota1 = Double.parseDouble(st);
         } while (st == null || st.length() == 0);
         
         do {
             st = JOptionPane.showInputDialog(null, "Informe sua segunda nota");
-            if (st == null || st.length() == 0){
+            if (st == null){
+                JOptionPane.showMessageDialog(null, "Saindo...");
+                System.exit(0);
+            } else if (st.length() == 0){
                 JOptionPane.showMessageDialog(null, "É necessario inserir uma nota!", "Erro!", 0);
-            } 
-            else nota2 = Double.parseDouble(st);
+            } else nota2 = Double.parseDouble(st);
         } while (st == null || st.length() == 0);
             
         do {
             st = JOptionPane.showInputDialog(null, "Informe sua terceira nota");
-            if (st == null || st.length() == 0){
+            if (st == null){
+                JOptionPane.showMessageDialog(null, "Saindo...");
+                System.exit(0);
+            } else if (st.length() == 0){
                 JOptionPane.showMessageDialog(null, "É necessario inserir uma nota!", "Erro!", 0);
-            } 
-            else nota3 = Double.parseDouble(st);
+            } else nota3 = Double.parseDouble(st);
         } while (st == null || st.length() == 0);
         
         media = (nota1 + nota2 + nota3)/3;
